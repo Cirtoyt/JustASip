@@ -1,0 +1,126 @@
+{
+    "name": "Input Controls",
+    "maps": [
+        {
+            "name": "Waiter-Walking",
+            "id": "ddda54ef-cedb-4c69-b09c-ad434ddc05fe",
+            "actions": [
+                {
+                    "name": "BalancingArm",
+                    "type": "Value",
+                    "id": "33cf7eac-7d05-4c16-a60f-03db13c283aa",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "WalkingMovement",
+                    "type": "Value",
+                    "id": "1316fe70-215b-4f41-b7cc-984e6fd7bea6",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "df5db6bf-0816-463a-b25f-37e8a5c04330",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BalancingArm",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "Keyboard WASD",
+                    "id": "0f14ede6-4e78-41e6-9544-307793d90edf",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "WalkingMovement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "2714b527-d928-4f1b-af98-b48dec02229e",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "WalkingMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "6b1a804a-0a2d-4e5e-9265-89b708bed21f",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "WalkingMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "57a16bf2-b2fc-49ca-acca-22d09ba74433",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "WalkingMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "d677662b-337a-4b2c-97e9-368ff8f83b4c",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "WalkingMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        },
+        {
+            "name": "Grabbing-Drink",
+            "id": "54fc25ea-1349-42cf-9124-288cac03d3e1",
+            "actions": [
+                {
+                    "name": "MoveRightArm",
+                    "type": "Value",
+                    "id": "04d4e365-a88b-4e48-8fd9-a7efcc92164c",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "321c5ae4-ec25-4073-aba1-70e8c8c9ae78",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveRightArm",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
