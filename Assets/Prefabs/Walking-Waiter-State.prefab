@@ -416,6 +416,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 532442560797752038, guid: 42ed1af12fd46aa4e8e684d7a400d6a7,
+        type: 3}
+      propertyPath: walkingCamera
+      value: 
+      objectReference: {fileID: 5648645328274038240}
     - target: {fileID: 8649631583952335582, guid: 42ed1af12fd46aa4e8e684d7a400d6a7,
         type: 3}
       propertyPath: m_Name
