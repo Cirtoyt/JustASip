@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8052077743763829832}
   - component: {fileID: 3564686582278830156}
   - component: {fileID: 8800095997619355351}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall-window-door-3x3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,6 +172,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: door-window
+      objectReference: {fileID: 0}
+    - target: {fileID: 5726412831980534836, guid: 68b2b2fdbe65046c7a2f445aaf4e1da8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
