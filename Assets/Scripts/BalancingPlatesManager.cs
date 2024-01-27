@@ -26,6 +26,8 @@ public class BalancingPlatesManager : MonoBehaviour
     private Vector2 lastWobblePosition;
     private Vector2 currentWobbleDelta;
 
+    public Vector2 CurrentArmPosition => currentArmPosition;
+
     public void OnBalancingArm(InputValue inputValue)
     {
         moveRightArmDelta = inputValue.Get<Vector2>();
