@@ -28,7 +28,6 @@ public class BalancingPlatesManager : MonoBehaviour
 
     public void OnBalancingArm(InputValue inputValue)
     {
-        Debug.Log("OnBalancingArm");
         moveRightArmDelta = inputValue.Get<Vector2>();
     }
 
@@ -87,7 +86,6 @@ public class BalancingPlatesManager : MonoBehaviour
         bool reachedDelayThisFrame = false;
         if (changeWobbleTargetDelayTimer >= changeWobbleTargetDelay)
         {
-            Debug.Log($"changeWobbleTargetDelayTimer >= changeWobbleTargetDelay");
             GenerateNewTargetWobblePosition();
 
             reachedDelayThisFrame = true;
