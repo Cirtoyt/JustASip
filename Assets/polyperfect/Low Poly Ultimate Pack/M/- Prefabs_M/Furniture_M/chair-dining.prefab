@@ -124,6 +124,7 @@ MonoBehaviour:
   customer: {fileID: 3795109022319556749, guid: b18f35835a7f541f095d0e0eb0024883,
     type: 3}
   spawnPoint: {fileID: 1746521089838677633}
+  spawnChance: 80
 --- !u!1 &9134877865468407531
 GameObject:
   m_ObjectHideFlags: 0
