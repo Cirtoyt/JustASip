@@ -1,5 +1,52 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &62811086803390952
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1031339348349395571}
+  - component: {fileID: 2161510765595751596}
+  m_Layer: 0
+  m_Name: BalancingPlatesManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1031339348349395571
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62811086803390952}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6772070317114301033}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2161510765595751596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62811086803390952}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e71ec710d8659984595c68a604936e23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  balancingPlatesUI: {fileID: 512436927259479260}
+  rightArmMovementSpeed: 0.0015
+  maxArmFromCentreDeviation: 1
 --- !u!1 &6724690102608987049
 GameObject:
   m_ObjectHideFlags: 0
@@ -33,6 +80,7 @@ Transform:
   - {fileID: 266044327578708858}
   - {fileID: 4244671207448106161}
   - {fileID: 215817887840492629}
+  - {fileID: 1031339348349395571}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &520208746120210716
@@ -347,6 +395,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 651ee15f30beaee419ccbcaad189b55f, type: 3}
+--- !u!114 &512436927259479260 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5367432475406243295, guid: 651ee15f30beaee419ccbcaad189b55f,
+    type: 3}
+  m_PrefabInstance: {fileID: 5575590262734067971}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 392c251bfdbcf7441a2d6af06a237e41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &4244671207448106161 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8613240067208629682, guid: 651ee15f30beaee419ccbcaad189b55f,

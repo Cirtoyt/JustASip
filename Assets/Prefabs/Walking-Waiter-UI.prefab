@@ -107,10 +107,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 6298680091476847748}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 2.9100037, y: 4.899994}
-  m_SizeDelta: {x: 331.47, y: 341.5}
+  m_SizeDelta: {x: 31.470001, y: 41.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6823437516618536780
 CanvasRenderer:
@@ -159,6 +159,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6298680091476847748}
+  - component: {fileID: 5367432475406243295}
   m_Layer: 5
   m_Name: RightArmBalanceUI
   m_TagString: Untagged
@@ -188,6 +189,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 1, y: 0}
+--- !u!114 &5367432475406243295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5324687950345099349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 392c251bfdbcf7441a2d6af06a237e41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIContainer: {fileID: 6298680091476847748}
+  centreDot: {fileID: 4287592363045654761}
+  armPositionDot: {fileID: 1328236911131798954}
 --- !u!1 &6206828701766916430
 GameObject:
   m_ObjectHideFlags: 0
