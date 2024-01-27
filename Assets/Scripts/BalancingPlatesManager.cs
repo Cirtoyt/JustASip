@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class BalancingPlatesManager : MonoBehaviour
 {
     [SerializeField] private BalancingPlatesUI balancingPlatesUI;
+    [SerializeField] private DishStack dishStack;
     [SerializeField] private float rightArmMovementSpeed = 1;
     [SerializeField] private float maxArmFromCentreDeviation = 1;
 
@@ -72,10 +73,9 @@ public class BalancingPlatesManager : MonoBehaviour
         // Check if out of range
         if (currentArmPosition.magnitude > maxArmFromCentreDeviation)
         {
-            // TODO
-            // Drop some plates
-            Debug.Log("Drop some plates or something!");
-            
+
+            dishStack.RemoveDish();
+
             // Reset to centre?
             currentArmPosition = Vector2.zero;
         }
