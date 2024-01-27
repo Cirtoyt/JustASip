@@ -21,7 +21,7 @@ public class Splash : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //test code
+        //test code(will delete later)
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             int i = 0;
@@ -46,3 +46,6 @@ public class Splash : MonoBehaviour
         Instantiate(prefab);
     }
 }
+
+// on collison with floor
+// then -- Create splash on floor
