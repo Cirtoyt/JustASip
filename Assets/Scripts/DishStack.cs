@@ -36,6 +36,8 @@ public class DishStack : MonoBehaviour
 
         topDish.isKinematic = false;
         topDish.AddForce(new Vector3(balancingPlatesManager.CurrentArmPosition.x * forceScaler, forceScaler / 2f, balancingPlatesManager.CurrentArmPosition.y * forceScaler), ForceMode.Impulse);
+        topDish.transform.SetParent(null);
+
         dishes.Remove(topDish);
     }
 }
