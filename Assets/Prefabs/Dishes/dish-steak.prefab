@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2556497391490330229}
   - component: {fileID: 1603240751346540531}
   - component: {fileID: 7420675582589787724}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cheese-slice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 6215839839334085210}
   - component: {fileID: 4009871097873280733}
   - component: {fileID: 6994400732691090546}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: corn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -226,7 +226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7073046577871646958}
   - component: {fileID: 1342555031315214909}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: dish-steak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 8735572307589673202}
   - component: {fileID: 3952911416132697590}
   - component: {fileID: 9069418472608611301}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: plate-round
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -374,7 +374,7 @@ GameObject:
   - component: {fileID: 1135747154920815588}
   - component: {fileID: 9042283495031295457}
   - component: {fileID: 2813972163374570456}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: meat-steak
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -19963,7 +19963,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1729692458276588, guid: 8fae16b0f2bd34fe6a3ff811a21d146b, type: 3}
       propertyPath: m_Name
-      value: table-television (12)
+      value: DishGiver
       objectReference: {fileID: 0}
     - target: {fileID: 1729692458276588, guid: 8fae16b0f2bd34fe6a3ff811a21d146b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -20029,7 +20029,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1729692458276588, guid: 8fae16b0f2bd34fe6a3ff811a21d146b,
+        type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 5622730483613393755}
   m_SourcePrefab: {fileID: 100100000, guid: 8fae16b0f2bd34fe6a3ff811a21d146b, type: 3}
 --- !u!4 &3796183207331197394 stripped
 Transform:
@@ -20037,6 +20041,39 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3800988314425627600}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3799340021531264316 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1729692458276588, guid: 8fae16b0f2bd34fe6a3ff811a21d146b,
+    type: 3}
+  m_PrefabInstance: {fileID: 3800988314425627600}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5622730483613393755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3799340021531264316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 819f2dc923468b54ab1a224964ce2db4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waiter: {fileID: 0}
+  dishStack: {fileID: 0}
+  possibleDishes:
+  - {fileID: -6068124151433120163, guid: b835c2886bf354bea92e3c68856cf40a, type: 3}
+  - {fileID: 8014025929525722458, guid: 78513a03077f8454fbb8409fb9682338, type: 3}
+  - {fileID: -3445308098265130743, guid: bd5a225aa497f4331ab2e58a9613dff1, type: 3}
+  - {fileID: -709811122222815396, guid: c8c8f10fa3517481e817373f423d8aeb, type: 3}
+  - {fileID: 4591010096821302734, guid: 81a6ad1932ae94a1ab39f99e1920efa4, type: 3}
+  - {fileID: 1342555031315214909, guid: 2ef0207f78a2c423bae8d357d81f45fc, type: 3}
+  minDishesToServeInStack: 5
+  maxDishesToServeInStack: 7
+  servingHeight: 1
+  minDishHeight: 0.2
+  maxDishHeight: 0.3
+  hasDishesReady: 0
 --- !u!1001 &3801098892847487714
 PrefabInstance:
   m_ObjectHideFlags: 0

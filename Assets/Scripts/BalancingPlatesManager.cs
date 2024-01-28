@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class BalancingPlatesManager : MonoBehaviour
 {
     [SerializeField] private BalancingPlatesUI balancingPlatesUI;
+    [SerializeField] private RoundManager roundManager;
     [SerializeField] private DishStack dishStack;
     [SerializeField] private float rightArmMovementSpeed = 1;
     [SerializeField] private float maxArmFromCentreDeviation = 1;
@@ -71,11 +72,20 @@ public class BalancingPlatesManager : MonoBehaviour
         if (currentArmPosition.magnitude > maxArmFromCentreDeviation)
         {
 
-            dishStack.RemoveDish();
+            if (dishStack.RemoveDish() == false)
+            {
+                roundManager.DeliverDish(false);
+            }
 
-            // Reset to centre?
-            currentArmPosition = Vector2.zero;
+            // Reset to centre
+            ResetToCentre();
         }
+    }
+
+    public void ResetToCentre()
+    {
+        currentArmPosition = Vector2.zero;
+        balancingPlatesUI.UpdateArmPosition(currentArmPosition);
     }
 
     private void GenerateWobbleDelta()

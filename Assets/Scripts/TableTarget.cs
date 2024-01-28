@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class TableTarget : MonoBehaviour
 {
-    public bool CanBeDeliveredTo;
+    public bool CanBeDeliveredTo = true;
 }

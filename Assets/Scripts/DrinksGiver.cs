@@ -30,7 +30,8 @@ public class DrinksGiver : MonoBehaviour
     }
 
     private States state;
-    private Transform heldDrink;
+    public Transform HeldDrink;
+    public bool DrinkIsPlaced = false;
 
     private void Update()
     {
@@ -60,11 +61,9 @@ public class DrinksGiver : MonoBehaviour
 
     private bool TryWalkToTargetAnchor(Transform targetAnchor, Transform originAnchor)
     {
-        Debug.Log("TryWalkToTargetAnchor");
         if (Vector3.Distance(transform.position, targetAnchor.position) > 0.1f)
         {
             anim.SetBool("Walking", true);
-            Debug.Log("true");
 
             transform.position += (targetAnchor.position - transform.position).normalized * walkSpeed * Time.deltaTime;
 
@@ -83,7 +82,6 @@ public class DrinksGiver : MonoBehaviour
 
     public void OfferDrink()
     {
-        Debug.Log("OfferDrink");
         StartCoroutine(OfferDrinkCoroutine());
     }
 
@@ -108,21 +106,28 @@ public class DrinksGiver : MonoBehaviour
     public void SpawnDrinkInHand()
     {
         int drinkToSpawnIndex = Random.Range(0, drinkPrefabs.Count);
-        heldDrink = Instantiate(drinkPrefabs[drinkToSpawnIndex], holdDrinkAnchor.position, holdDrinkAnchor.rotation, holdDrinkAnchor).transform;
+        HeldDrink = Instantiate(drinkPrefabs[drinkToSpawnIndex], holdDrinkAnchor.position, holdDrinkAnchor.rotation, holdDrinkAnchor).transform;
         anim.SetBool("HoldingDrink", true);
     }
 
     private void PlaceDrinkOnCounter()
     {
-        heldDrink.parent = placeDrinkAnchor;
-        heldDrink.localPosition = Vector3.zero;
-        heldDrink.localRotation = Quaternion.identity;
+        HeldDrink.parent = placeDrinkAnchor;
+        HeldDrink.localPosition = Vector3.zero;
+        HeldDrink.localRotation = Quaternion.identity;
         anim.SetBool("HoldingDrink", false);
+        DrinkIsPlaced = true;
+    }
+
+    public void DestroyDrinkPlaced()
+    {
+        Destroy(HeldDrink.gameObject);
+        HeldDrink = null;
+        DrinkIsPlaced = false;
     }
 
     public void ReturnToBarFrontWithDrink()
     {
-        Debug.Log("ReturnToBarFrontWithDrink");
         SpawnDrinkInHand();
 
         // Walk to front with drink

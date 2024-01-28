@@ -3017,6 +3017,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 117024486734604028}
+  - component: {fileID: 8746621672327991924}
   - component: {fileID: 2646585774967551350}
   - component: {fileID: 532442560797752038}
   - component: {fileID: 620426420433341623}
@@ -3051,6 +3052,24 @@ Transform:
   - {fileID: 5298825303054117505}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8746621672327991924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8649631583952335582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d990c4f778fbe9d4ca8efc796edec60c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dishGiver: {fileID: 0}
+  drinksGiver: {fileID: 0}
+  roundManager: {fileID: 0}
+  distanceToTableRequired: 3
+  distanceToDishesRequired: 1
+  distanceToDrinkRequired: 1
 --- !u!95 &2646585774967551350
 Animator:
   serializedVersion: 5
@@ -3216,7 +3235,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8649631583952335582}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 100
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -3482,6 +3501,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225226106558388337, guid: fe806739ea681464c996d45f60745eee,
+        type: 3}
+      propertyPath: dishes.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1341315230574915877, guid: fe806739ea681464c996d45f60745eee,
         type: 3}
