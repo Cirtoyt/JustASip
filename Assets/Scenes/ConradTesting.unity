@@ -125,6 +125,24 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &208661005 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8183237986545118047, guid: 71d9706cba5853c429201142f05489e9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1808854112}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &309389138 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5761033048847811361, guid: 7b309a64af689b145a63c830df9d4daa,
+    type: 3}
+  m_PrefabInstance: {fileID: 969636796482711700}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8629a7adcb4fd42a4b0a6d1650d84e72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &371189078
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,6 +173,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   balancingPlatesController: {fileID: 969636796482711701}
+  roundManager: {fileID: 1529006743}
+  drinksGiver: {fileID: 1283684948}
   minChangeWobbleTargetDelay: 4
   maxChangeWobbleTargetDelay: 4
   minWobbleIntensity: 0.8
@@ -198,96 +218,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1283684946
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3980264098230673651, guid: a7c194111ae133241905391cec02294c,
-        type: 3}
-      propertyPath: m_Name
-      value: woman_metalhead
-      objectReference: {fileID: 0}
-    - target: {fileID: 6673858588513863800, guid: a7c194111ae133241905391cec02294c,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.018
-      objectReference: {fileID: 0}
-    - target: {fileID: 6673858588513863800, guid: a7c194111ae133241905391cec02294c,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.009999871
-      objectReference: {fileID: 0}
-    - target: {fileID: 6673858588513863800, guid: a7c194111ae133241905391cec02294c,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 7.555
-      objectReference: {fileID: 0}
-    - target: {fileID: 6673858588513863800, guid: a7c194111ae133241905391cec02294c,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.79148585
-      objectReference: {fileID: 0}
-    - target: {fileID: 6673858588513863800, guid: a7c194111ae133241905391cec02294c,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6673858588513863800, guid: a7c194111ae133241905391cec02294c,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.6111875
-      objectReference: {fileID: 0}
-    - target: {fileID: 6673858588513863800, guid: a7c194111ae133241905391cec02294c,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6673858588513863800, guid: a7c194111ae133241905391cec02294c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6673858588513863800, guid: a7c194111ae133241905391cec02294c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -75.351
-      objectReference: {fileID: 0}
-    - target: {fileID: 6673858588513863800, guid: a7c194111ae133241905391cec02294c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3980264098230673651, guid: a7c194111ae133241905391cec02294c,
-        type: 3}
-      insertIndex: 1
-      addedObject: {fileID: 1283684948}
-  m_SourcePrefab: {fileID: 100100000, guid: a7c194111ae133241905391cec02294c, type: 3}
---- !u!1 &1283684947 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3980264098230673651, guid: a7c194111ae133241905391cec02294c,
+--- !u!4 &1149612211 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5580561671297999512, guid: 71d9706cba5853c429201142f05489e9,
     type: 3}
-  m_PrefabInstance: {fileID: 1283684946}
+  m_PrefabInstance: {fileID: 1808854112}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1283684948
+--- !u!114 &1283684948 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 7484657862701685170, guid: f187ccc72ac62c84fa821841bf578351,
+    type: 3}
+  m_PrefabInstance: {fileID: 8935541763025686227}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1283684947}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8aee06778851f8f43ae6c664176dd03e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1341890789 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8302103619594938795, guid: 71d9706cba5853c429201142f05489e9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1808854112}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1529006742
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,19 +271,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d07593566c1b0a144811bc8730c86159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drinksGiver: {fileID: 0}
-  dishStack: {fileID: 0}
-  balancingPlatesManager: {fileID: 0}
-  initialPresetDrunknessEffectData: []
-  initialScalingMinChangeWobbleTargetDelay: 0
-  initialScalingMaxChangeWobbleTargetDelay: 0
+  drinksGiver: {fileID: 1283684948}
+  dishStack: {fileID: 309389138}
+  balancingPlatesManager: {fileID: 969636796482711701}
+  initialPresetDrunknessEffectData:
+  - {fileID: 11400000, guid: 1c48b3c0d24e4ed458392829adc30e02, type: 2}
+  initialScalingMinChangeWobbleTargetDelay: 1
+  initialScalingMaxChangeWobbleTargetDelay: 2
   changeWobbleTargetDelayScaler: 0.02
-  initialScalingMinWobbleIntensity: 0
-  initialScalingMaxWobbleIntensity: 0
-  wobbleIntensityScaler: 0.02
+  initialScalingMinWobbleIntensity: 0.5
+  initialScalingMaxWobbleIntensity: 1.1
+  wobbleIntensityScaler: 0.01
   scalingWobbleIntensitySmoothingCurve:
     serializedVersion: 2
-    m_Curve: []
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -648,6 +621,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &2129056599 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4623028758640446183, guid: 7b309a64af689b145a63c830df9d4daa,
+    type: 3}
+  m_PrefabInstance: {fileID: 969636796482711700}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &969636796482711700
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -656,6 +635,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4175372100375144729, guid: 7b309a64af689b145a63c830df9d4daa,
+        type: 3}
+      propertyPath: drinksGiver
+      value: 
+      objectReference: {fileID: 1283684948}
+    - target: {fileID: 4175372100375144729, guid: 7b309a64af689b145a63c830df9d4daa,
+        type: 3}
+      propertyPath: roundManager
+      value: 
+      objectReference: {fileID: 1529006743}
     - target: {fileID: 4623028758640446183, guid: 7b309a64af689b145a63c830df9d4daa,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -748,6 +737,94 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e71ec710d8659984595c68a604936e23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &8935541763025686227
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3027388535352473399, guid: f187ccc72ac62c84fa821841bf578351,
+        type: 3}
+      propertyPath: m_Name
+      value: woman_metalhead
+      objectReference: {fileID: 0}
+    - target: {fileID: 4729205980612435900, guid: f187ccc72ac62c84fa821841bf578351,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.018
+      objectReference: {fileID: 0}
+    - target: {fileID: 4729205980612435900, guid: f187ccc72ac62c84fa821841bf578351,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.009999871
+      objectReference: {fileID: 0}
+    - target: {fileID: 4729205980612435900, guid: f187ccc72ac62c84fa821841bf578351,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.555
+      objectReference: {fileID: 0}
+    - target: {fileID: 4729205980612435900, guid: f187ccc72ac62c84fa821841bf578351,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.79148585
+      objectReference: {fileID: 0}
+    - target: {fileID: 4729205980612435900, guid: f187ccc72ac62c84fa821841bf578351,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4729205980612435900, guid: f187ccc72ac62c84fa821841bf578351,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.6111875
+      objectReference: {fileID: 0}
+    - target: {fileID: 4729205980612435900, guid: f187ccc72ac62c84fa821841bf578351,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4729205980612435900, guid: f187ccc72ac62c84fa821841bf578351,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4729205980612435900, guid: f187ccc72ac62c84fa821841bf578351,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -75.351
+      objectReference: {fileID: 0}
+    - target: {fileID: 4729205980612435900, guid: f187ccc72ac62c84fa821841bf578351,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7484657862701685170, guid: f187ccc72ac62c84fa821841bf578351,
+        type: 3}
+      propertyPath: waiter
+      value: 
+      objectReference: {fileID: 2129056599}
+    - target: {fileID: 7484657862701685170, guid: f187ccc72ac62c84fa821841bf578351,
+        type: 3}
+      propertyPath: BackOfBarAnchor
+      value: 
+      objectReference: {fileID: 1341890789}
+    - target: {fileID: 7484657862701685170, guid: f187ccc72ac62c84fa821841bf578351,
+        type: 3}
+      propertyPath: FrontOfBarAnchor
+      value: 
+      objectReference: {fileID: 1149612211}
+    - target: {fileID: 7484657862701685170, guid: f187ccc72ac62c84fa821841bf578351,
+        type: 3}
+      propertyPath: placeDrinkAnchor
+      value: 
+      objectReference: {fileID: 208661005}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f187ccc72ac62c84fa821841bf578351, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -759,4 +836,4 @@ SceneRoots:
   - {fileID: 1532030298}
   - {fileID: 2087352169}
   - {fileID: 1529006744}
-  - {fileID: 1283684946}
+  - {fileID: 8935541763025686227}

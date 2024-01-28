@@ -10,17 +10,29 @@ public class RoundManager : MonoBehaviour
     [SerializeField] private BalancingPlatesManager balancingPlatesManager;
     [Header("Data")]
     [SerializeField] private List<DrunknessEffectDataSO> initialPresetDrunknessEffectData = new List<DrunknessEffectDataSO>();
-    [SerializeField] private float initialScalingMinChangeWobbleTargetDelay;
-    [SerializeField] private float initialScalingMaxChangeWobbleTargetDelay;
+    [SerializeField] private float initialScalingMinChangeWobbleTargetDelay = 1;
+    [SerializeField] private float initialScalingMaxChangeWobbleTargetDelay = 2;
     [SerializeField] private float changeWobbleTargetDelayScaler = 0.02f;
-    [SerializeField] private float initialScalingMinWobbleIntensity;
-    [SerializeField] private float initialScalingMaxWobbleIntensity;
-    [SerializeField] private float wobbleIntensityScaler = 0.02f;
-    [SerializeField] private AnimationCurve scalingWobbleIntensitySmoothingCurve;
+    [SerializeField] private float initialScalingMinWobbleIntensity = 0.5f;
+    [SerializeField] private float initialScalingMaxWobbleIntensity = 1.1f;
+    [SerializeField] private float wobbleIntensityScaler = 0.01f;
+    [SerializeField] private AnimationCurve scalingWobbleIntensitySmoothingCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
 
     private int currentPresetDrunknessDataIndex;
     private float currentScalingChangeWobbleTargetDelayScale;
     private float currentScalingWobbleIntensityScale;
+    private List<TableTarget> tableTargets = new List<TableTarget>();
+
+    private void Start()
+    {
+        foreach (var tableTarget in FindObjectsOfType<TableTarget>())
+        {
+            if (tableTarget.CanBeDeliveredTo)
+                tableTargets.Add(tableTarget);
+        }
+
+        // Start cut-scene
+    }
 
     public void BeginFirstRound()
     {
@@ -28,10 +40,11 @@ public class RoundManager : MonoBehaviour
         currentScalingChangeWobbleTargetDelayScale = 1;
         currentScalingWobbleIntensityScale = 1;
 
+        drinksGiver.SpawnDrinkInHand();
         drinksGiver.OfferDrink();
     }
 
-    public void IntensityDrunkness()
+    public void IntensifyDrunkness()
     {
         if (currentPresetDrunknessDataIndex + 1 < initialPresetDrunknessEffectData.Count)
         {
@@ -64,21 +77,8 @@ public class RoundManager : MonoBehaviour
     public void DeliverDish()
     {
         // Bell ding sound effect from bar
-        // SHow something visually to say go back to bar
+        // Show something visually to say go back to bar
 
         drinksGiver.ReturnToBarFrontWithDrink();
-    }
-
-    private void Update()
-    {
-        // Start cut-scene
-
-        // Grab a drink
-
-        // Pick-up dishes
-
-        // Deliver
-
-        // Go back to bar
     }
 }

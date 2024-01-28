@@ -60,15 +60,12 @@ public class BalancingPlatesManager : MonoBehaviour
         // Apply random wobble input
         GenerateWobbleDelta();
         currentArmPosition += currentWobbleDelta;
-        //Debug.Log($"currentWobbleDelta: {currentWobbleDelta}");
 
         // Apply correcting player input
         currentArmPosition += moveRightArmDelta * rightArmMovementSpeed;
-        //Debug.Log($"moveRightArmDelta * rightArmMovementSpeed: {moveRightArmDelta * rightArmMovementSpeed}");
 
         //Update UI
         balancingPlatesUI.UpdateArmPosition(currentArmPosition);
-        //Debug.Log($"currentArmPosition: {currentArmPosition}");
 
         // Check if out of range
         if (currentArmPosition.magnitude > maxArmFromCentreDeviation)

@@ -10,10 +10,21 @@ public class TestBalancingPlatesLevelControllerEditor : Editor
     {
         base.OnInspectorGUI();
 
+        TestBalancingPlatesLevelController script = target as TestBalancingPlatesLevelController;
+
         if (GUILayout.Button("Begin The Wobbling"))
         {
-            TestBalancingPlatesLevelController script = target as TestBalancingPlatesLevelController;
             script.BeginTheWobbling();
+        }
+
+        if (GUILayout.Button("Start Drink Giver"))
+        {
+            script.roundManager.BeginFirstRound();
+        }
+
+        if (GUILayout.Button("Return Drink Giver To Bar Front"))
+        {
+            script.drinksGiver.ReturnToBarFrontWithDrink();
         }
     }
 }
