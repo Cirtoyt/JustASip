@@ -314,9 +314,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   distance: 3
-  height: 2
+  height: 1.75
   rotationSpeed: 18
-  smoothSpeed: 1
 --- !u!114 &6041683590488790528
 MonoBehaviour:
   m_ObjectHideFlags: 0

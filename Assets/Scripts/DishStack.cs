@@ -10,6 +10,7 @@ public class DishStack : MonoBehaviour
     [SerializeField] private List<Rigidbody> dishes = new();
     [SerializeField] private float wobbleScaler = 0.1f;
     [SerializeField] private float forceScaler = 4f;
+
     private void Update()
     {
         for (int i = 0; i < dishes.Count; i++)
@@ -19,10 +20,16 @@ public class DishStack : MonoBehaviour
             dishes[i].transform.localPosition = new( directionX, dishes[i].transform.localPosition.y, directionZ);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            RemoveDish();
-        }
+        // DEBUG
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    RemoveDish();
+        //}
+    }
+
+    public void AddDishes(List<Rigidbody> dishes)
+    {
+
     }
 
     public void RemoveDish()
