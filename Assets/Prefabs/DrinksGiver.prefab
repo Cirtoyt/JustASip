@@ -1,0 +1,169 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7033601917611284703
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5408002513916505629}
+  m_Layer: 0
+  m_Name: HoldingDrinkAnchor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5408002513916505629
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7033601917611284703}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.084, y: -0, z: -0.042}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3643247868273869582}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2107628338477635524
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 218885515025566621, guid: a7c194111ae133241905391cec02294c,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: cf190587e3f9b114aa7500e68cc602f1, type: 2}
+    - target: {fileID: 218885515025566621, guid: a7c194111ae133241905391cec02294c,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3980264098230673651, guid: a7c194111ae133241905391cec02294c,
+        type: 3}
+      propertyPath: m_Name
+      value: DrinksGiver
+      objectReference: {fileID: 0}
+    - target: {fileID: 6673858588513863800, guid: a7c194111ae133241905391cec02294c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.018
+      objectReference: {fileID: 0}
+    - target: {fileID: 6673858588513863800, guid: a7c194111ae133241905391cec02294c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.009999871
+      objectReference: {fileID: 0}
+    - target: {fileID: 6673858588513863800, guid: a7c194111ae133241905391cec02294c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.555
+      objectReference: {fileID: 0}
+    - target: {fileID: 6673858588513863800, guid: a7c194111ae133241905391cec02294c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.79148585
+      objectReference: {fileID: 0}
+    - target: {fileID: 6673858588513863800, guid: a7c194111ae133241905391cec02294c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6673858588513863800, guid: a7c194111ae133241905391cec02294c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.6111875
+      objectReference: {fileID: 0}
+    - target: {fileID: 6673858588513863800, guid: a7c194111ae133241905391cec02294c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6673858588513863800, guid: a7c194111ae133241905391cec02294c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6673858588513863800, guid: a7c194111ae133241905391cec02294c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -75.351
+      objectReference: {fileID: 0}
+    - target: {fileID: 6673858588513863800, guid: a7c194111ae133241905391cec02294c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8813626963502452090, guid: a7c194111ae133241905391cec02294c, type: 3}
+    - {fileID: 8636595487660458909, guid: a7c194111ae133241905391cec02294c, type: 3}
+    - {fileID: 1180017209203277268, guid: a7c194111ae133241905391cec02294c, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3436429500763100362, guid: a7c194111ae133241905391cec02294c,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5408002513916505629}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3980264098230673651, guid: a7c194111ae133241905391cec02294c,
+        type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 7484657862701685170}
+  m_SourcePrefab: {fileID: 100100000, guid: a7c194111ae133241905391cec02294c, type: 3}
+--- !u!95 &2177050589279706201 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 218885515025566621, guid: a7c194111ae133241905391cec02294c,
+    type: 3}
+  m_PrefabInstance: {fileID: 2107628338477635524}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3027388535352473399 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3980264098230673651, guid: a7c194111ae133241905391cec02294c,
+    type: 3}
+  m_PrefabInstance: {fileID: 2107628338477635524}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7484657862701685170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3027388535352473399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aee06778851f8f43ae6c664176dd03e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 2177050589279706201}
+  drinkPrefabs:
+  - {fileID: 4188672092678448156, guid: b7ec9b7e7244baf4ca92fa3bc09dfb22, type: 3}
+  - {fileID: 576006834169551448, guid: d36a7288cf87dd94fa81d2abb39132d9, type: 3}
+  - {fileID: 6305044381854063041, guid: 742048f1bd5bcb541bef875f78a59b72, type: 3}
+  - {fileID: 3724442304341120697, guid: 528c00f756b246441bb76778574f8ad0, type: 3}
+  holdDrinkAnchor: {fileID: 5408002513916505629}
+  placeDrinkAnchor: {fileID: 0}
+  FrontOfBarAnchor: {fileID: 0}
+  BackOfBarAnchor: {fileID: 0}
+  waiter: {fileID: 0}
+  placeDrinkAnimWeight: 0.6
+  placeDrinkAnimLength: 1
+  pauseAferDrinkPlaceLength: 1
+  walkSpeed: 1
+  rotationSpeed: 0.035
+  waiterDrinksMinDistance: 2.5
+--- !u!4 &3643247868273869582 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3436429500763100362, guid: a7c194111ae133241905391cec02294c,
+    type: 3}
+  m_PrefabInstance: {fileID: 2107628338477635524}
+  m_PrefabAsset: {fileID: 0}

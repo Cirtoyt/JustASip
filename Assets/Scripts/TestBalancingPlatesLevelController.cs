@@ -5,6 +5,8 @@ using UnityEngine;
 public class TestBalancingPlatesLevelController : MonoBehaviour
 {
     [SerializeField] BalancingPlatesManager balancingPlatesController;
+    public RoundManager roundManager;
+    public DrinksGiver drinksGiver;
     [Space]
     [SerializeField] private float minChangeWobbleTargetDelay;
     [SerializeField] private float maxChangeWobbleTargetDelay;

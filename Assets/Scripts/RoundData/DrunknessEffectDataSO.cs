@@ -9,7 +9,7 @@ public class DrunknessEffectDataSO : ScriptableObject
     public float MaxChangeWobbleTargetDelay;
     public float MinWobbleIntensity;
     public float MaxWobbleIntensity;
-    public AnimationCurve WobbleIntensitySmoothingCurve;
+    public AnimationCurve WobbleIntensitySmoothingCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
 
     // Any drunk visual effect data
 }

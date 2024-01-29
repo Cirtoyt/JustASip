@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class BalancingPlatesManager : MonoBehaviour
 {
     [SerializeField] private BalancingPlatesUI balancingPlatesUI;
+    [SerializeField] private RoundManager roundManager;
     [SerializeField] private DishStack dishStack;
     [SerializeField] private float rightArmMovementSpeed = 1;
     [SerializeField] private float maxArmFromCentreDeviation = 1;
@@ -52,6 +53,7 @@ public class BalancingPlatesManager : MonoBehaviour
     {
         lastWobbleTargetPosition = currentWobbleTargetPosition;
         targetWobbleDirection = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
+        wobbleIntensity = Random.Range(minWobbleIntensity, maxWobbleIntensity);
         currentWobbleTargetPosition = targetWobbleDirection * wobbleIntensity;
     }
 
@@ -60,25 +62,31 @@ public class BalancingPlatesManager : MonoBehaviour
         // Apply random wobble input
         GenerateWobbleDelta();
         currentArmPosition += currentWobbleDelta;
-        //Debug.Log($"currentWobbleDelta: {currentWobbleDelta}");
 
         // Apply correcting player input
         currentArmPosition += moveRightArmDelta * rightArmMovementSpeed;
-        //Debug.Log($"moveRightArmDelta * rightArmMovementSpeed: {moveRightArmDelta * rightArmMovementSpeed}");
 
         //Update UI
         balancingPlatesUI.UpdateArmPosition(currentArmPosition);
-        //Debug.Log($"currentArmPosition: {currentArmPosition}");
 
         // Check if out of range
         if (currentArmPosition.magnitude > maxArmFromCentreDeviation)
         {
 
-            dishStack.RemoveDish();
+            if (dishStack.RemoveDish() == false)
+            {
+                roundManager.DeliverDish(false);
+            }
 
-            // Reset to centre?
-            currentArmPosition = Vector2.zero;
+            // Reset to centre
+            ResetToCentre();
         }
+    }
+
+    public void ResetToCentre()
+    {
+        currentArmPosition = Vector2.zero;
+        balancingPlatesUI.UpdateArmPosition(currentArmPosition);
     }
 
     private void GenerateWobbleDelta()
@@ -112,6 +120,7 @@ public class BalancingPlatesManager : MonoBehaviour
 
     public void SetChangeWobbleDirectionDelay(float newMin, float newMax)
     {
+        Debug.Log($"SetChangeWobbleDirectionDelay({newMin}, {newMax})");
         minChangeWobbleTargetDelay = newMin;
         maxChangeWobbleTargetDelay = newMax;
 
@@ -125,10 +134,9 @@ public class BalancingPlatesManager : MonoBehaviour
 
     public void SetWobbleIntensity(float newMin, float newMax)
     {
+        Debug.Log($"SetWobbleIntensity({newMin}, {newMax})");
         minWobbleIntensity = newMin;
         maxWobbleIntensity = newMax;
-        
-        wobbleIntensity = Random.Range(minWobbleIntensity, maxWobbleIntensity);
     }
 
     public void SetWobbleIntensitySmoothingCurve(AnimationCurve newCurve)

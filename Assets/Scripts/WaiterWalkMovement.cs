@@ -18,6 +18,7 @@ public class WaiterWalkMovement : MonoBehaviour
 
     public Vector2 MoveDirection { get; private set; }
     public float Drunkness => drunkness;
+    public void IncreaseDrunkness(float increase) => drunkness += increase;
     public float MoveSpeed => ((runSpeed - walkSpeed) * drunkness) + walkSpeed;
 
     private void Update()

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3803679370762418018}
   - component: {fileID: -709811122222815396}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: dish-hotdog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 8350689167818661876}
   - component: {fileID: 6083042424165273060}
   - component: {fileID: 1283629637393847467}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: plate-round
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,6 +161,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fries (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1991905838947792, guid: a91fd09f6a11341b0828e7359c4c53be, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4615231148747240, guid: a91fd09f6a11341b0828e7359c4c53be, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.125
@@ -223,6 +227,10 @@ PrefabInstance:
     - target: {fileID: 1991905838947792, guid: a91fd09f6a11341b0828e7359c4c53be, type: 3}
       propertyPath: m_Name
       value: fries (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1991905838947792, guid: a91fd09f6a11341b0828e7359c4c53be, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4615231148747240, guid: a91fd09f6a11341b0828e7359c4c53be, type: 3}
       propertyPath: m_LocalPosition.x
@@ -287,6 +295,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: hotdog (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 640856146296550866, guid: 619117aed4341a04ca08f5e4f2be32e6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 640856146296842738, guid: 619117aed4341a04ca08f5e4f2be32e6,
         type: 3}
@@ -362,6 +375,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: hotdog
       objectReference: {fileID: 0}
+    - target: {fileID: 640856146296550866, guid: 619117aed4341a04ca08f5e4f2be32e6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 640856146296842738, guid: 619117aed4341a04ca08f5e4f2be32e6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -435,6 +453,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fries
       objectReference: {fileID: 0}
+    - target: {fileID: 1991905838947792, guid: a91fd09f6a11341b0828e7359c4c53be, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4615231148747240, guid: a91fd09f6a11341b0828e7359c4c53be, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.08399999
@@ -498,6 +520,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: hotdog (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 640856146296550866, guid: 619117aed4341a04ca08f5e4f2be32e6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 640856146296842738, guid: 619117aed4341a04ca08f5e4f2be32e6,
         type: 3}

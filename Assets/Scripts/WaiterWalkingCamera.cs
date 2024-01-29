@@ -15,6 +15,11 @@ public class WaiterWalkingCamera : MonoBehaviour
 
     private float currentRotationAngle = 0f;
 
+    private void Start()
+    {
+        currentRotationAngle = waiter.transform.rotation.eulerAngles.y;
+    }
+
     void LateUpdate()
     {
         Vector3 playerForward = waiter.transform.forward;

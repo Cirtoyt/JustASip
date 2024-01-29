@@ -46,9 +46,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   balancingPlatesUI: {fileID: 512436927259479260}
+  roundManager: {fileID: 0}
   dishStack: {fileID: 5761033048847811361}
   rightArmMovementSpeed: 0.0015
-  maxArmFromCentreDeviation: 1
+  maxArmFromCentreDeviation: 0.97
 --- !u!114 &4175372100375144729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,6 +63,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   balancingPlatesController: {fileID: 2161510765595751596}
+  roundManager: {fileID: 0}
+  drinksGiver: {fileID: 0}
   minChangeWobbleTargetDelay: 2
   maxChangeWobbleTargetDelay: 3
   minWobbleIntensity: 0.3
