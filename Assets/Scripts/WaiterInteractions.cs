@@ -14,6 +14,9 @@ public class WaiterInteractions : MonoBehaviour
 
     public void OnInteract()
     {
+        if (!enabled)
+            return;
+
         if (roundManager.CurrentTargetTable != null)
         {
             if (Vector3.Distance(roundManager.CurrentTargetTable.transform.position, transform.position) <= distanceToTableRequired)
@@ -38,7 +41,7 @@ public class WaiterInteractions : MonoBehaviour
             {
                 // Pick-up drink
                 drinksGiver.DestroyDrinkPlaced();
-                roundManager.IntensifyDrunkness(true);
+                roundManager.IntensifyDrunkness(false);
                 return;
             }
         }

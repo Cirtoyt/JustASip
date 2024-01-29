@@ -19,6 +19,8 @@ public class DishGiver : MonoBehaviour
 
     public void DishUpNewDishStack()
     {
+        SoundManager.Instance.bellDingAudioSource.PlayDelayed(0.5f);
+
         spawnedDishes.Clear();
         int numDishesToServe = Random.Range(minDishesToServeInStack, maxDishesToServeInStack + 1);
         for (int i = 0; i < numDishesToServe; i++)
@@ -44,6 +46,8 @@ public class DishGiver : MonoBehaviour
     {
         spawnedDishes.ForEach((d) => d.transform.position += Vector3.up * (dishStack.transform.position.y - servingHeight - 0.15f));
         dishStack.AddDishes(spawnedDishes);
+
+        SoundManager.Instance.dishesAudioSource.Play();
 
         hasDishesReady = false;
     }

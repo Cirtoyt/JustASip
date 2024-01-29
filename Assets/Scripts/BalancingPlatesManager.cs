@@ -53,6 +53,7 @@ public class BalancingPlatesManager : MonoBehaviour
     {
         lastWobbleTargetPosition = currentWobbleTargetPosition;
         targetWobbleDirection = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
+        wobbleIntensity = Random.Range(minWobbleIntensity, maxWobbleIntensity);
         currentWobbleTargetPosition = targetWobbleDirection * wobbleIntensity;
     }
 
@@ -119,6 +120,7 @@ public class BalancingPlatesManager : MonoBehaviour
 
     public void SetChangeWobbleDirectionDelay(float newMin, float newMax)
     {
+        Debug.Log($"SetChangeWobbleDirectionDelay({newMin}, {newMax})");
         minChangeWobbleTargetDelay = newMin;
         maxChangeWobbleTargetDelay = newMax;
 
@@ -132,10 +134,9 @@ public class BalancingPlatesManager : MonoBehaviour
 
     public void SetWobbleIntensity(float newMin, float newMax)
     {
+        Debug.Log($"SetWobbleIntensity({newMin}, {newMax})");
         minWobbleIntensity = newMin;
         maxWobbleIntensity = newMax;
-        
-        wobbleIntensity = Random.Range(minWobbleIntensity, maxWobbleIntensity);
     }
 
     public void SetWobbleIntensitySmoothingCurve(AnimationCurve newCurve)

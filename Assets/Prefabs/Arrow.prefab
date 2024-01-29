@@ -70,6 +70,7 @@ MonoBehaviour:
     m_PostInfinity: 0
     m_RotationOrder: 4
   speed: 1
+  spinSpeed: 45
   bounceSize: 0.4
 --- !u!1 &6446386631188973729
 GameObject:

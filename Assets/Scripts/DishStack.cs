@@ -49,6 +49,9 @@ public class DishStack : MonoBehaviour
         dishes.Remove(topDish);
         droppedDishes.Add(topDish);
 
+        SoundManager.Instance.smashPlateAudioSource.pitch = Random.Range(0.9f, 1.1f);
+        SoundManager.Instance.smashPlateAudioSource.Play();
+
         if (dishes.Count > 0)
             return true;
         else

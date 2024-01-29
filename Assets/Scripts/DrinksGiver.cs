@@ -95,7 +95,7 @@ public class DrinksGiver : MonoBehaviour
 
         anim.SetLayerWeight(1, 0);
 
-        PlaceDrinkOnCounter();
+        yield return PlaceDrinkOnCounter();
 
         yield return new WaitForSeconds(pauseAferDrinkPlaceLength);
 
@@ -107,16 +107,21 @@ public class DrinksGiver : MonoBehaviour
     {
         int drinkToSpawnIndex = Random.Range(0, drinkPrefabs.Count);
         HeldDrink = Instantiate(drinkPrefabs[drinkToSpawnIndex], holdDrinkAnchor.position, holdDrinkAnchor.rotation, holdDrinkAnchor).transform;
+        HeldDrink.transform.GetChild(0).gameObject.SetActive(false);
         anim.SetBool("HoldingDrink", true);
     }
 
-    private void PlaceDrinkOnCounter()
+    private IEnumerator PlaceDrinkOnCounter()
     {
+        yield return new WaitUntil(() => HeldDrink != null);
+
         HeldDrink.parent = placeDrinkAnchor;
         HeldDrink.localPosition = Vector3.zero;
         HeldDrink.localRotation = Quaternion.identity;
         anim.SetBool("HoldingDrink", false);
         DrinkIsPlaced = true;
+        HeldDrink.transform.GetChild(0).gameObject.SetActive(true);
+        SoundManager.Instance.placeDrinkAudioSource.Play();
     }
 
     public void DestroyDrinkPlaced()
@@ -124,6 +129,11 @@ public class DrinksGiver : MonoBehaviour
         Destroy(HeldDrink.gameObject);
         HeldDrink = null;
         DrinkIsPlaced = false;
+    }
+
+    public void SendToBackOfBar()
+    {
+        state = States.WalkingToBackOfBar;
     }
 
     public void ReturnToBarFrontWithDrink()
